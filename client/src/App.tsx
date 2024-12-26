@@ -1,21 +1,19 @@
 import './App.css';
-import { Route, Routes } from 'react-router';
-import Home from './components/Home';
-import SignUp from './components/auth/SignUp';
-import Login from './components/auth/Login';
-import ProtectedRoutes from './utils/ProtectedRoutes';
+import Login from './components/auth/Login/Login';
+import { Route, Routes } from 'react-router-dom';
+import SignUp from './components/auth/Register/SignUp';
+import Home from './components/Home/Home';
+import Navbar from './components/Shared/Navbar';
 
 function App() {
 
   return (
     <>
+      <Navbar />
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/signUp' element={<SignUp />} />
-        <Route path='*' element={<h1>No route found</h1>} />
-        <Route element={<ProtectedRoutes />}>
-          <Route path='/' element={<Home />} />
-        </Route>
+        <Route path='/register' element={<SignUp />} />
       </Routes>
     </>
   )

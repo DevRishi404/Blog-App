@@ -1,16 +1,14 @@
 import { useState } from "react";
-import { useAuth } from "./AuthProvider";
 import './Login.css'
 
 const Login = () => {
-    const auth = useAuth();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const handleSubmit = async () => {
         if (email !== '' && password !== '') {
-            auth.loginAction({ email, password });
+            // auth.loginAction({ email, password });
             return;
         }
     }

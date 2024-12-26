@@ -1,10 +1,7 @@
 import { useState } from "react";
-import { signUp } from "../../services/authService";
-import { useAuth } from "./AuthProvider";
 
 
 const SignUp = () => {
-    const auth = useAuth();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -12,11 +9,10 @@ const SignUp = () => {
     const handleSubmit = async () => {
         console.log(`${email} - ${password}`);
         if(email !== '' && password !== null) {
-            auth.registerAction({email, password});
             return;
         }
-        const response = await signUp({email, password});
-        console.log(response);
+        // const response = await signUp({email, password});
+        // console.log(response);
     }
 
     return (
