@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 30px; /* Increased padding */
+    width: 400px; /* Wider form */
+    text-align: center; /* Centered text */
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+    font-size: 24px; /* Larger font size */
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 12px; /* Increased padding */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ced4da; /* Light border */
+    border-radius: 5px; /* Slightly rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light blue shadow */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Primary blue color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px; /* Increased padding */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    width: 100%; /* Full width */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Error Message */
+.error-message {
+    color: #dc3545; /* Bootstrap danger color */
+    margin-bottom: 10px; /* Margin for spacing */
+    font-size: 14px; /* Font size */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%; /* Full width on small screens */
+        padding: 20px; /* Reduced padding */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller heading on small screens */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text */
+    }
+}
